@@ -38,8 +38,10 @@ var calc = function() {
   return {
     getnum: function(num) {
       if (num == "c") {
+        //CLEAR
         location.reload();
       } else if (num == "=") {
+        //=press
         if (data.operator == "+") {
           data.total = add(data.number, data.temp);
           data.number = data.total;
@@ -89,33 +91,44 @@ var calc = function() {
           } else {
             data.temp = data.temp * 10 + num;
           }
+          return data.temp;
         } else {
+          console.log(num + "op=" + data.operator);
           if (data.operator == "+") {
             data.total = add(data.number, data.temp);
             data.number = data.total;
+            data.total = 0;
             data.temp = 0;
             data.operator = num;
+            return data.number;
           }
           if (data.operator == "-") {
             data.total = sub(data.number, data.temp);
             data.number = data.total;
+            data.total = 0;
             data.temp = 0;
             data.operator = num;
+            return data.number;
           }
           if (data.operator == "*") {
             data.total = mul(data.number, data.temp);
             data.number = data.total;
+            data.total = 0;
             data.temp = 0;
             data.operator = num;
+            return data.number;
           }
           if (data.operator == "/") {
             data.total = div(data.number, data.temp);
             data.number = data.total;
             data.temp = 0;
+            data.total = 0;
             data.operator = num;
+            return data.number;
           }
+          //     console.log(data.temp);
+          // return data.number;
         }
-        return data.temp;
       }
     }
   };
@@ -133,8 +146,8 @@ var controller = (function(uiCtrl, calc) {
   var Ctrlnum = function(e) {
     var number, operator, val, id, value;
     if (e.type == "keypress") {
-      console.log(e);
-      if (e.keyCode >= 49 && e.keyCode <= 57) {
+      // console.log(e);
+      if (e.keyCode >= 48 && e.keyCode <= 57) {
         id = "btnnum";
         value = e.key;
       } else if (e.keyCode == 13) {
@@ -159,7 +172,7 @@ var controller = (function(uiCtrl, calc) {
       operator = value;
       //   console.log(operator);
       val = calc().getnum(operator);
-      console.log(val);
+      // console.log(data);
       //display value
       uiCtrl().display(val);
     }
