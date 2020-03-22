@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <style>
+      .btn {
+        margin-bottom: 3rem;
+        padding: 4rem;
+        font-size: x-large;
+      }
+    </style>
+  </head>
+  <body id="calculator">
+    <div class="container" style="margin-top: 4rem;">
+      <div class="jumbotron">
+        <h1 class="display-3 text-center">Calculator</h1>
+        <p class="lead">
+          <textarea
+            name="textbox"
+            id="textbox"
+            disabled
+            class="form-control"
+            style="text-align: right;font-size: xx-large;"
+          ></textarea>
+        </p>
+        <hr class="my-2" />
+        <div class="row">
+          <div class="col-sm-3">
+            <button id="btnnum" value="7" class="btn btn-info form-control">
+              7
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnnum" value="8" class="btn btn-info form-control">
+              8
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnnum" value="9" class="btn btn-info form-control">
+              9
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnop" value="/" class="btn btn-secondary form-control">
+              /
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnnum" value="4" class="btn btn-info form-control">
+              4
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnnum" value="5" class="btn btn-info form-control">
+              5
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnnum" value="6" class="btn btn-info form-control">
+              6
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnop" value="*" class="btn btn-secondary form-control">
+              *
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnnum" value="1" class="btn btn-info form-control">
+              1
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnnum" value="2" class="btn btn-info form-control">
+              2
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnnum" value="3" class="btn btn-info form-control">
+              3
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnop" value="+" class="btn btn-secondary form-control">
+              +
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnop" value="c" class="btn btn-danger form-control">
+              CE
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnnum" value="0" class="btn btn-info form-control">
+              0
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnop" value="=" class="btn btn-warning form-control">
+              =
+            </button>
+          </div>
+          <div class="col-sm-3">
+            <button id="btnop" value="-" class="btn btn-secondary form-control">
+              -
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
